@@ -5,12 +5,12 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as sfn from "aws-cdk-lib/aws-stepfunctions";
 import { Construct } from "constructs";
 
-export interface ProcessorStackProps extends cdk.StackProps {
+export interface StateMachineStackProps extends cdk.StackProps {
   readonly topics: sns.Topic[];
 }
 
-export class ProcessorStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: ProcessorStackProps) {
+export class StateMachineStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props: StateMachineStackProps) {
     super(scope, id, props);
 
     // In the future this state machine will do some work...
